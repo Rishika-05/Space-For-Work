@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect } from 'react'
 import '../login.css'
 import logo from '../../assets/images/space1.gif'
-import logoText from '../../assets/images/Space.png'
+import logoText from '../../assets/images/Space (4).png'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -88,7 +88,7 @@ export default function SignIn(props) {
                     <div className="container left">
                         <img src={logo} className="gif_left phone" alt="logo"></img>
                         <img src={logoText} className="gif_left pull" alt="main_logo"></img>
-                        <p className="text">A Space to practice and achieve DREAMS</p>
+                        <p className="text mt-5 mb-4">Building Space to achieve DREAMS</p>
                     </div>
                     <div className="container right">
                         <div className="container box">

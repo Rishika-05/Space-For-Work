@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../login.css'
 import logo from '../../assets/images/space1.gif'
-import logoText from '../../assets/images/Space.png'
+import logoText from '../../assets/images/Space (4).png'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
@@ -132,7 +132,7 @@ export default function SignUp() {
                 <div className="container left">
                     <img src={logo} className="gif_left phone" alt="logo"></img>
                     <img src={logoText} className="gif_left pull" alt="main_logo"></img>
-                    <p className="text">A Space to practice and achieve DREAMS</p>
+                    <p className="text mt-5 mb-4">Building Space to achieve DREAMS</p>
                 </div>
                 <div className="container right">
                     <div className="container box">
@@ -154,7 +154,7 @@ export default function SignUp() {
                                 onChange={handleChange} />
                         </div>
                         <button type="submit" className="btn btn-primary push" onClick={register}>Create Account</button>
-                        <Link className="back" to="/">Back to Login Page</Link>
+                        <Link className="back" style={{'textDecoration': 'none'}} to="/">Back to Login Page</Link>
                     </div>
                 </div>
             </div>

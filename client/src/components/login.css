@@ -47,7 +47,7 @@
     background-color: #8585E1;
 }
 .form-group{
-    margin: 1.5em;
+    margin: 1.5em 0.75rem;
 }
 @media screen and (max-width:700px){
     .upperBox{
