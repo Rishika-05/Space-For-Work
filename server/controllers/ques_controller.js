@@ -25,7 +25,7 @@ module.exports.puzzleUpload = async (req, res) => {
    try {
       let questionData = req.body;
       const question = new Puzzle(questionData);
-      // console.log(questionData);
+      console.log(questionData);
       question.save(err => {
          if (err) {
             res.send(err)
