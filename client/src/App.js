@@ -6,6 +6,7 @@ import Home from './components/Home/Home.js'
 import Navbar from './components/Navbar/Navbar.js'
 // import Profile from './components/Profile/Profile.jsx'
 import QuestionForm from './components/QuestionForm/QuestionForm.jsx'
+import PuzzleForm from './components/PuzzleForm/PuzzleForm.jsx'
 import { ToastContainer } from 'react-toastify';
 import {
   BrowserRouter as Router,
@@ -40,6 +41,7 @@ function App() {
           } />
           {/* <Route path="/profile/:id" element={<Profile user={user} setLoginUser={setLoginUser} />} /> */}
           <Route path="/questionUpload" element={<QuestionForm user={user} />} />
+          <Route path="/puzzleUpload" element={<PuzzleForm user={user} />} />
           {/* <Route exact path='/unauthorized' element={<Unauthorized />} />
           <Route path='*' element={<Error404 setInterview={setInterview} />} /> */}
         </Routes>
