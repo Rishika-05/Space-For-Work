@@ -80,7 +80,7 @@ export default function SignUp() {
         if (name && email && password && (password === reEnterPassword)) {
 
             if (chkpass(password)) {
-                axios.post("http://localhost:9003/signUp", user)
+                axios.post("https://space-for-work-backend.herokuapp.com/signUp", user)
                     .then(res => {
                         toast(res.data.message, {
                             position: "top-center",
@@ -127,7 +127,7 @@ export default function SignUp() {
     }
 
     return (
-        <div>
+        <div className = "login-parent">
             <div className="container upperBox">
                 <div className="container left">
                     <img src={logo} className="gif_left phone" alt="logo"></img>

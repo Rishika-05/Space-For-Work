@@ -24,12 +24,12 @@ export default function Home(props) {
                 <div className="imgContainer">
                     <img src={prob} alt="Problem" className='imgg' />
                     <h5>Problem Set</h5>
-                    <Link to="/questionUpload"><button type="button" style={{ "fontSize": "18px" }} className="btn btn-dark my-4">Add Question</button></Link>
+                    <Link to="/questionUpload"><button type="button" style={{ "fontSize": "18px" }} className="btn-sm btn-dark my-4">Add Question</button></Link>
                 </div>
                 <div className="imgContainer pull">
                     <img src={puz} alt="Puzzle" className='imgg' />
                     <h5>Puzzles</h5>
-                    <Link to="/puzzleUpload"><button type="button" style={{ "fontSize": "18px" }} className="btn btn-dark my-4">Add Puzzle</button></Link>
+                    <Link to="/puzzleUpload"><button type="button" style={{ "fontSize": "18px" }} className="btn-sm btn-dark my-4">Add Puzzle</button></Link>
                 </div>
             </div>
         </div>

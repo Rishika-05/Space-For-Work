@@ -33,7 +33,7 @@ export default function QuestionForm(props) {
             tag: event.target.tag.value,
         }
 
-        fetch(`http://localhost:9003/admin/questionUpload`, {
+        fetch(`https://space-for-work-backend.herokuapp.com/admin/questionUpload/?user=${props.user._id}`, {
             method: "POST", body: JSON.stringify(data), headers: {
                 'Content-Type': 'application/json'
             },

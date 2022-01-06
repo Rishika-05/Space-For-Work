@@ -24,6 +24,12 @@ const userSchema = new mongoose.Schema({
          type: mongoose.Schema.Types.ObjectId,
          ref: 'Question',
       }
+   ],
+   puzzlesCreated: [
+      {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: 'Puzzle',
+      }
    ]
 }, {
    timestamps: true,

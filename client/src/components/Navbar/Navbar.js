@@ -33,9 +33,9 @@ export default function Navbar(props) {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light" style={{ "backgroundColor": "white", "height": "60px", "zIndex": '2', "boxShadow": "0px 2px 10px #EAEAEA" }}>
+            <nav className="navbar navbar-expand-lg sticky-top navbar-light" style={{ "backgroundColor": "white", "height": "70px", "zIndex": '2', "boxShadow": "0px 2px 10px #EAEAEA" }}>
                 <div className="container-fluid">
-                    <Link className="navbar-brand ms-5" to="/" style={{ "marginLeft": "10px" }}><img src={Logo} className="mt-2" alt="Space Logo" height='48px' /> </Link>
+                    <Link className="navbar-brand ms-3" to="/" style={{ "marginLeft": "10px" }}><img src={Logo} className="mt-2" alt="Space Logo" height='48px' /> </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

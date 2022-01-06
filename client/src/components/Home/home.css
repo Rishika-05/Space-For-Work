@@ -1,7 +1,8 @@
 .maincontent{
     position:absolute !important;
     width: 100vw;
-    margin-top: 3.5%;
+    padding:3%;
+    
 }
 
 .selectionColor::selection{
@@ -36,10 +37,12 @@
     .bottom_boxx{
         flex-direction: column;
         justify-content: space-around !important;
+        margin-top: 20%;
     }
     .imgContainer{
         height: 60vh !important;
         width: 60vw !important;
+        margin-bottom: 30%;;
     }
     .pull{
         margin-top: -15%;

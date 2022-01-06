@@ -27,7 +27,7 @@ export default function QuestionForm(props) {
             
         }
         console.log(data);
-        fetch(`http://localhost:9003/admin/puzzleUpload`, {
+        fetch(`https://space-for-work-backend.herokuapp.com/admin/puzzleUpload/?user=${props.user._id}`, {
             method: "POST", body: JSON.stringify(data), headers: {
                 'Content-Type': 'application/json'
             },

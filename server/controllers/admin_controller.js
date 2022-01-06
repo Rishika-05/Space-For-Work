@@ -64,3 +64,25 @@ module.exports.signUp = async (req, res) => {
       console.log(err);
    }
 }
+module.exports.getUser = async (req,res)=>{
+   try{
+       console.log("Here");
+       let user = await User.findById(req.params.id)
+       .populate(
+           {
+               path:'questionsCreated',
+               
+               
+           }
+       )
+       .populate({
+          path:'puzzlesCreated',
+       })
+       
+
+       res.send({user:user});
+   }catch(err){
+       console.log(err.message);
+       res.status(500).send("Interal Server Error");
+   }
+}

@@ -21,7 +21,7 @@ export default function SignIn(props) {
         if (localStorage.getItem('admin')) {
             let token = localStorage.getItem('admin');
             const passer = { token: token }
-            axios.post("http://localhost:9003/check", passer)
+            axios.post("https://space-for-work-backend.herokuapp.com/check", passer)
                 .then(res => {
                     if (res.data.message === 200) {
                         console.log(res.data.user);
@@ -42,7 +42,7 @@ export default function SignIn(props) {
     const signin = () => {
         const { email, password } = user
         if (email && password) {
-            axios.post("http://localhost:9003/login", user)
+            axios.post("https://space-for-work-backend.herokuapp.com/login", user)
                 .then(res => {
                     toast(res.data.message, {
                         position: "top-center",
@@ -83,7 +83,7 @@ export default function SignIn(props) {
 
     return (
         <div>
-            <div>
+            <div className="login-parent">
                 <div className="container upperBox">
                     <div className="container left">
                         <img src={logo} className="gif_left phone" alt="logo"></img>
