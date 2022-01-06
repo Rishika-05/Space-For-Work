@@ -33,7 +33,7 @@ export default function QuestionForm(props) {
             },
         });
 
-        toast('Question added successfully', {
+        toast('Puzzle added successfully', {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,

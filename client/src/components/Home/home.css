@@ -2,7 +2,6 @@
     position:absolute !important;
     width: 100vw;
     padding:3%;
-    
 }
 
 .selectionColor::selection{
@@ -42,7 +41,7 @@
     .imgContainer{
         height: 60vh !important;
         width: 60vw !important;
-        margin-bottom: 30%;;
+        margin-bottom: 10%;;
     }
     .pull{
         margin-top: -15%;

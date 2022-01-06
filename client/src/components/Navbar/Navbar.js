@@ -33,14 +33,14 @@ export default function Navbar(props) {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg sticky-top navbar-light" style={{ "backgroundColor": "white", "height": "70px", "zIndex": '2', "boxShadow": "0px 2px 10px #EAEAEA" }}>
+            <nav className="navbar navbar-expand-lg sticky-top navbar-light" style={{ "backgroundColor": "white", "height": "60px", "zIndex": '2', "boxShadow": "0px 2px 10px #EAEAEA" }}>
                 <div className="container-fluid">
-                    <Link className="navbar-brand ms-3" to="/" style={{ "marginLeft": "10px" }}><img src={Logo} className="mt-2" alt="Space Logo" height='48px' /> </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <Link className="navbar-brand ms-3" to="/" style={{ "marginLeft": "10px" }}><img src={Logo} className="mt-1" alt="Space Logo" height='48px' /> </Link>
+                    <button className="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0 me-5 " style={{ "fontSize": "18px" }}>
+                        <ul className="navbar-nav ms-auto mb-4 mb-lg-0 me-4 " style={{ "fontSize": "18px" }}>
                             <li className="nav-item me-4">
                                 <Link className={`nav-link ${loc.pathname === '/problemset' ? "active" : ""}`} aria-current="page" to="/questionUpload">Problem Set</Link>
                             </li>
