@@ -4,10 +4,9 @@ import SignIn from './components/SignIn/SignIn.jsx'
 import SignUp from './components/SignUp/SignUp.jsx'
 import Home from './components/Home/Home.js'
 import Navbar from './components/Navbar/Navbar.js'
-// import Profile from './components/Profile/Profile.jsx'
+import Profile from './components/Profile/Profile.jsx'
 import QuestionForm from './components/QuestionForm/QuestionForm.jsx'
 import PuzzleForm from './components/PuzzleForm/PuzzleForm.jsx'
-import Profile from './components/Profile/Profile.jsx'
 import { ToastContainer } from 'react-toastify';
 import {
   BrowserRouter as Router,
