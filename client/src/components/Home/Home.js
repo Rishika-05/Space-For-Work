@@ -21,13 +21,13 @@ export default function Home(props) {
                 <h2 style={{ fontSize: '50px', fontWeight: 'bold', color: '#263238' }}>Improve  Space</h2>
             </div>
             <div className="bottom_boxx mb-5" style={{ textAlign: 'center' }}>
-                <div className="imgContainer mb-5">
-                    <img src={prob} alt="Problem" className='imgg' />
+                <div className="imgContainer mb-1">
+                    <img src={prob} alt="Problem" className='imgg' /><br/>
                     <h5>Problem Set</h5>
                     <Link to="/questionUpload"><button type="button" style={{ "fontSize": "18px" }} className="btn-sm btn-dark my-4">Add Question</button></Link>
                 </div>
-                <div className="imgContainer mb-5 pull">
-                    <img src={puz} alt="Puzzle" className='imgg' />
+                <div className="imgContainer mb-1 pull">
+                    <img src={puz} alt="Puzzle" className='imgg' /><br />
                     <h5>Puzzles</h5>
                     <Link to="/puzzleUpload"><button type="button" style={{ "fontSize": "18px" }} className="btn-sm btn-dark my-4">Add Puzzle</button></Link>
                 </div>

@@ -11,7 +11,6 @@ export default function Navbar(props) {
     const navigate = useNavigate();
     let loc = useLocation();
 
-    console.log(props.user);
     const userProfile = () => {
         navigate(`/profile/${props.user._id}`)
     }
