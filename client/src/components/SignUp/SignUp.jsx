@@ -127,7 +127,7 @@ export default function SignUp() {
     }
 
     return (
-        <div className="view-log">
+        <div>
             <div className="login-parent">
                 <div className="container upperBox mt-5">
                     <div className="container left">
