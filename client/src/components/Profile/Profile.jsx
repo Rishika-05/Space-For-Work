@@ -77,7 +77,7 @@ export default function Profile(props) {
                                     userProfile.questionsCreated.slice(0).reverse().map((element) => {
 
                                         return <><div id="profile-submissions" className="d-flex">
-                                            <Link id="ques-link" to={"/"} ><h6>{element.title}</h6></Link>
+                                             <a id="ques-link" href={`https://space-dun-one.vercel.app/problemPage/${element._id}`} target = "_blank"><h6>{element.title}</h6></a>
 
                                         </div>
                                             {/* <hr></hr>   */}
@@ -95,7 +95,7 @@ export default function Profile(props) {
                                     userProfile.puzzlesCreated.slice(0).reverse().map((element) => {
 
                                         return <><div id="profile-submissions" className="d-flex">
-                                            <a id="ques-link" href={`https://space-dun-one.vercel.app/problemPage/${element._id}`} ><h6>{element.title}</h6></a>
+                                            <a id="ques-link" href={`https://space-dun-one.vercel.app/puzzlePage/${element._id}`} target = "_blank"><h6>{element.title}</h6></a>
 
                                         </div>
                                         </>
