@@ -1,8 +1,8 @@
-.maincontent {
-    /* position: absolute !important; */
+.main_content {
+   
     width: 100vw;
     padding: 3%;
-    margin-bottom: 20%;
+    
 }
 
 .selectionColor::selection {
@@ -21,11 +21,11 @@
 }
 
 .bottom_boxx {
-    position: absolute !important;
+    
     display: flex;
     justify-content: space-evenly;
     width: 100vw;
-    margin-top: 15.6%;
+    
     height: auto;
     align-items: center;
 }
@@ -38,19 +38,19 @@
     .bottom_boxx {
         flex-direction: column;
         justify-content: space-around !important;
-        margin-top: 10%;
+       
     }
 
     .imgContainer {
         height: 55vh !important;
         width: 55vw !important;
         margin-bottom: 10%;
-        ;
+        
     }
-
-    .pull {
-        margin-top: -15%;
+    .main_content h1,h2{
+        font-size:40px!important;
     }
+    
 
     .imgg {
         height: 30vh !important;
@@ -59,7 +59,7 @@
 
     .hh3 {
         font-size: 1.4rem !important;
-        margin-top: -20% !important;
+        
     }
 
     .btnn {
