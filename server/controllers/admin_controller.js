@@ -1,6 +1,17 @@
 const User = require('../models/adminuser');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const nodemailer = require('nodemailer')
+const transporter = nodemailer.createTransport({
+   host: 'smtp.gmail.com',
+   port: 587,
+   secure: false,
+   requireTLS: true,
+   auth: {
+      user: 'team.space.793@gmail.com',
+      pass: 'space.793'
+   }
+});
 
 module.exports.check = (req, res) => {
    const { token } = req.body;
@@ -64,25 +75,47 @@ module.exports.signUp = async (req, res) => {
       console.log(err);
    }
 }
-module.exports.getUser = async (req,res)=>{
-   try{
-       console.log("Here");
-       let user = await User.findById(req.params.id)
-       .populate(
-           {
-               path:'questionsCreated',
-               
-               
-           }
-       )
-       .populate({
-          path:'puzzlesCreated',
-       })
-       
+module.exports.getUser = async (req, res) => {
+   try {
+      console.log("Here");
+      let user = await User.findById(req.params.id)
+         .populate(
+            {
+               path: 'questionsCreated',
 
-       res.send({user:user});
-   }catch(err){
-       console.log(err.message);
-       res.status(500).send("Interal Server Error");
+
+            }
+         )
+         .populate({
+            path: 'puzzlesCreated',
+         })
+
+
+      res.send({ user: user });
+   } catch (err) {
+      console.log(err.message);
+      res.status(500).send("Interal Server Error");
    }
+}
+
+module.exports.code = async (req, res) => {
+
+   const { email } = req.body
+   var mailOptions = {
+      from: 'team.space.793@gmail.com',
+      to: email,
+      cc: 'ratuldawar11@gmail.com',
+      subject: "Request for Admin access",
+      text: `Team Space has received your request for admin access for account ${email}\nwe will verify your details and then send you admin key\n\nYours,\nTeam Space`
+   }
+   transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+         res.send({ done: 0, detail: error });
+         console.log(error);
+      }
+      else {
+         res.send({ done: 1, detail: info });
+         console.log(info);
+      }
+   })
 }

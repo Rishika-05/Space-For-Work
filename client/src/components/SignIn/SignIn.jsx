@@ -15,7 +15,7 @@ export default function SignIn(props) {
         email: "",
         password: "",
     });
-
+    const [key, setKey] = useState("");
     useLayoutEffect(() => {
 
         if (localStorage.getItem('admin')) {
@@ -39,30 +39,42 @@ export default function SignIn(props) {
         })
     }
 
+    const keyChange = e => {
+        setKey(e.target.value)
+    }
+
     const signin = () => {
         const { email, password } = user
         if (email && password) {
-            axios.post("https://space-for-work-backend.herokuapp.com/login", user)
-                .then(res => {
-                    toast(res.data.message, {
-                        position: "top-center",
-                        autoClose: 2000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                    })
 
-                    props.setLoginUser(res.data.user)
-                    if (res.data.user) {
-                        localStorage.setItem('adminMain', JSON.stringify(res.data.user));
-                        localStorage.setItem('admin', res.data.token);
-                        navigate('/')
-                    }
-                    else
-                        navigate('/login')
-                });
+            console.log("aaa ", process.env.REACT_APP_ADMIN_KEY);
+            if (key === process.env.REACT_APP_ADMIN_KEY) {
+
+                axios.post("https://space-for-work-backend.herokuapp.com/login", user)
+                    .then(res => {
+                        toast(res.data.message, {
+                            position: "top-center",
+                            autoClose: 2000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                        })
+
+                        props.setLoginUser(res.data.user)
+                        if (res.data.user) {
+                            localStorage.setItem('adminMain', JSON.stringify(res.data.user));
+                            localStorage.setItem('admin', res.data.token);
+                            navigate('/')
+                        }
+                        else
+                            navigate('/login')
+                    });
+            }
+            else {
+                toast('incorrect key', { position: "top-center", autoClose: 2000 })
+            }
         }
         else {
             toast('invalid input', {
@@ -93,9 +105,13 @@ export default function SignIn(props) {
                     <div className="container right">
                         <div className="container box">
                             <div className="form-group">
+                                <input name="key" type="text" value={key} className='form-control' placeholder="Admin Key"
+                                    onChange={keyChange}
+                                />
+                            </div>
+                            <div className="form-group">
                                 <input name="email" type="email" value={user.email} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Work Email"
                                     onChange={handleChange} />
-
                             </div>
                             <div className="form-group">
                                 <input type="password" name="password" value={user.password} className="form-control" id="show_hide_password" placeholder="Password"

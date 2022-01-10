@@ -83,15 +83,21 @@ export default function SignUp() {
                 axios.post("https://space-for-work-backend.herokuapp.com/signUp", user)
                     .then(res => {
                         toast(res.data.message, {
-                            position: "top-center",
-                            autoClose: 2000,
+                            position: "Details submitted check your Email for further details",
+                            autoClose: 5000,
                             hideProgressBar: false,
                             closeOnClick: true,
-                            pauseOnHover: true,
+                            pauseOnHover: false,
                             draggable: true,
                             progress: undefined,
                         });
-                        navigate('/')
+                        const sender = { email }
+                        axios.post("https://space-for-work-backend.herokuapp.com/code", sender)
+                            .then(res => {
+                                if (res.data.done === 1)
+                                    navigate('/')
+                            })
+
                     })
             }
             else {
