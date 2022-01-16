@@ -105,7 +105,7 @@ export default function SignIn(props) {
                     <div className="container right">
                         <div className="container box">
                             <div className="form-group">
-                                <input name="key" type="password" value={key} className='form-control' placeholder="Admin Key"
+                                <input name="key" type="text" value={key} className='form-control' placeholder="Admin Key"
                                     onChange={keyChange}
                                 />
                             </div>
